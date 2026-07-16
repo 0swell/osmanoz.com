@@ -24,7 +24,8 @@ Personal branding, professional resume presentation, project showcase, and inter
 
 | Layer | Choice |
 |---|---|
-| Framework | Next.js (App Router) + TypeScript |
+| Framework | Next.js (App Router) |
+| Language | TypeScript |
 | Styling | Tailwind CSS |
 | Animation | Framer Motion |
 | Database | Neon PostgreSQL + Prisma |
