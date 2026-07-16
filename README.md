@@ -2,7 +2,7 @@
 
 Personal branding, professional resume presentation, project showcase, and interaction analytics.
 
-🔗 **Live:** [osmanoz.com](https://osmanoz.com) · 📋 **Project Guide:** [CLAUDE.md](./CLAUDE.md)
+🔗 **Live:** [osmanoz-com.vercel.app](https://osmanoz-com.vercel.app) · 📋 **Project Guide:** [CLAUDE.md](./CLAUDE.md)
 
 > This project is built strictly against a written project guide (`CLAUDE.md`) covering architecture, design system, and development standards — prepared before a single line of code was written.
 
