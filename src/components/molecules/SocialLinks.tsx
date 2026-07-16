@@ -3,7 +3,7 @@ import { FaLinkedin } from "react-icons/fa6";
 
 const links = [
   { href: "https://github.com/0swell", label: "GitHub", Icon: SiGithub },
-  { href: "https://www.linkedin.com/", label: "LinkedIn", Icon: FaLinkedin },
+  { href: "https://www.linkedin.com/in/osmanoz15", label: "LinkedIn", Icon: FaLinkedin },
 ];
 
 export function SocialLinks() {
