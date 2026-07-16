@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id         String      @id @default(cuid())
+  slug       String      @unique
+  title      String
+  desc       String
+  techStack  String[]
+  links      Json        @default("{}")
+  order      Int         @default(0)
+  clickCount Int         @default(0)
+  isActive   Boolean     @default(true)
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  analytics  Analytics[]
+}
+
+enum EventType {
+  CARD_CLICK
+  CV_DOWNLOAD
+}
+
+model Analytics {
+  id        String    @id @default(cuid())
+  eventType EventType
+  projectId String?
+  project   Project?  @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  createdAt DateTime  @default(now())
+
+  @@index([eventType, createdAt])
+}
+
+model Settings {
+  key   String @id
+  value String
+}
