@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useScroll,
@@ -20,6 +20,11 @@ export function ScrollStack({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const reduceMotion = useReducedMotion();
+  // Hydration uyumu: ilk client render her zaman server ile aynı (animasyonlu) yapıyı basar;
+  // reduced-motion düzeni ancak mount sonrasında devreye girer.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end end"],
@@ -28,7 +33,7 @@ export function ScrollStack({
   const y0 = useTransform(scrollYProgress, [0, 0.5], ["0%", "-100%"]);
   const y1 = useTransform(scrollYProgress, [0.5, 1], ["0%", "-100%"]);
 
-  if (reduceMotion) {
+  if (mounted && reduceMotion) {
     return (
       <div>
         {sections.map((s, i) => (
