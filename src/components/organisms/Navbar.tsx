@@ -34,19 +34,19 @@ export function Navbar({
 
   return (
     <nav className="fixed inset-x-0 top-0 z-40 border-b-2 border-line/60 bg-background/60 backdrop-blur-md">
-      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-2 sm:px-4">
         <button
           onClick={() => goTo(0)}
-          className="font-display text-base font-bold cursor-pointer"
+          className="font-display text-sm sm:text-base font-bold cursor-pointer"
         >
           osmanoz<span className="text-accent">.com</span>
         </button>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0.5 sm:gap-1">
           {sections.map((label, i) => (
             <button
               key={label}
               onClick={() => goTo(i)}
-              className={`rounded-lg px-3 py-1.5 text-sm transition-colors cursor-pointer ${
+              className={`rounded-lg px-2 sm:px-3 py-1.5 text-xs sm:text-sm transition-colors cursor-pointer ${
                 active === i
                   ? "bg-elevated text-accent font-medium"
                   : "text-muted hover:text-foreground"
@@ -55,7 +55,7 @@ export function Navbar({
               {label}
             </button>
           ))}
-          <span aria-hidden className="mx-3.5 h-4 w-0.5 rounded-full bg-accent" />
+          <span aria-hidden className="hidden sm:block sm:mx-3.5 h-4 w-0.5 rounded-full bg-accent" />
           <LanguageToggle locale={locale} />
           <ThemeToggle />
         </div>

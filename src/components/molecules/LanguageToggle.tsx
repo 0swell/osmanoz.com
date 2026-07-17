@@ -43,7 +43,7 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
     <button
       onClick={switchLocale}
       aria-label={next === "en" ? "Switch to English" : "Türkçeye geç"}
-      className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-muted hover:bg-elevated hover:text-foreground transition-colors cursor-pointer"
+      className="inline-flex items-center gap-1 sm:gap-1.5 rounded-lg px-1.5 sm:px-2.5 py-1.5 text-xs sm:text-sm font-medium text-muted hover:bg-elevated hover:text-foreground transition-colors cursor-pointer"
     >
       {locale === "tr" ? <TrFlag /> : <EnFlag />}
       {locale.toUpperCase()}
