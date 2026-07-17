@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { getLocale } from "@/i18n/locale";
@@ -13,6 +13,12 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin", "latin-ext"],
 });
+
+// "light dark": tarayıcıya iki temayı da kendimiz yönettiğimizi bildirir;
+// Android Chrome'un "siteleri koyu temaya zorla" karartması bu sayede devre dışı kalır
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://osmanoz.com"),
