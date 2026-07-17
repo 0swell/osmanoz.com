@@ -55,6 +55,7 @@ export function Navbar({
               {label}
             </button>
           ))}
+          <span aria-hidden className="mx-1.5 h-4 w-0.5 rounded-full bg-accent" />
           <LanguageToggle locale={locale} />
           <ThemeToggle />
         </div>
