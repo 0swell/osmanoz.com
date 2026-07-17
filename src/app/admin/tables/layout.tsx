@@ -1,6 +1,6 @@
 import { AdminHeader } from "@/components/organisms/admin/AdminHeader";
 
-export default function DashboardLayout({
+export default function TablesLayout({
   children,
 }: {
   children: React.ReactNode;

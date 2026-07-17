@@ -1,4 +1,4 @@
-import { uploadCv } from "@/app/admin/actions";
+import { uploadCv, deleteCv } from "@/app/admin/actions";
 import { Button } from "@/components/atoms/Button";
 import { Upload } from "lucide-react";
 
@@ -27,6 +27,13 @@ export function CvUploadForm({ currentUrl }: { currentUrl: string | null }) {
           <Upload size={16} /> Yükle
         </Button>
       </form>
+      {currentUrl && (
+        <form action={deleteCv} className="mt-3">
+          <button className="text-xs text-red-500 hover:underline cursor-pointer">
+            Mevcut CV&apos;yi sil (Blob + veritabanı kaydı)
+          </button>
+        </form>
+      )}
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { getServerSession } from "next-auth";
-import { put } from "@vercel/blob";
+import { put, del } from "@vercel/blob";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
@@ -62,6 +62,9 @@ export async function uploadCv(formData: FormData) {
   if (!file || file.type !== "application/pdf") {
     throw new Error("Sadece PDF yüklenebilir");
   }
+  // Eski dosya Blob'da yetim kalmasın: önce sil, sonra yenisini yükle
+  const old = await prisma.settings.findUnique({ where: { key: "cv_url" } });
+  if (old) await del(old.value).catch(() => {});
   const blob = await put("cv/osman-oz-cv.pdf", file, {
     access: "public",
     addRandomSuffix: true,
@@ -71,6 +74,17 @@ export async function uploadCv(formData: FormData) {
     update: { value: blob.url },
     create: { key: "cv_url", value: blob.url },
   });
+  revalidatePath("/");
+  revalidatePath("/admin/dashboard");
+}
+
+export async function deleteCv() {
+  await requireAdmin();
+  const old = await prisma.settings.findUnique({ where: { key: "cv_url" } });
+  if (old) {
+    await del(old.value).catch(() => {});
+    await prisma.settings.delete({ where: { key: "cv_url" } });
+  }
   revalidatePath("/");
   revalidatePath("/admin/dashboard");
 }
