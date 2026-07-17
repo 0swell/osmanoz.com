@@ -65,9 +65,11 @@ export async function uploadCv(formData: FormData) {
   // Eski dosya Blob'da yetim kalmasın: önce sil, sonra yenisini yükle
   const old = await prisma.settings.findUnique({ where: { key: "cv_url" } });
   if (old) await del(old.value).catch(() => {});
-  const blob = await put("cv/osman-oz-cv.pdf", file, {
+  // Dosya, yüklendiği isimle saklanır — indirme de aynı isimle iner (örn. Resume-OsmanOz.pdf)
+  const blob = await put(`cv/${file.name}`, file, {
     access: "public",
-    addRandomSuffix: true,
+    addRandomSuffix: false,
+    allowOverwrite: true,
   });
   await prisma.settings.upsert({
     where: { key: "cv_url" },
