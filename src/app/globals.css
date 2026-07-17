@@ -4,6 +4,7 @@
 
 /* Tasarım token'ları (CLAUDE.md 4.3): 60-30-10 — zemin / yüzey / vurgu. Sıcak palet. */
 :root {
+  color-scheme: light;
   --background: #faf7f2;
   --surface: #ffffff;
   --elevated: #f1ece3;
@@ -15,6 +16,7 @@
 }
 
 .dark {
+  color-scheme: dark;
   --background: #0f0e0c;
   --surface: #1a1815;
   --elevated: #24211c;
