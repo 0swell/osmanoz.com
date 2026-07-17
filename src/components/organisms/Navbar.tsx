@@ -2,10 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/molecules/ThemeToggle";
+import { LanguageToggle } from "@/components/molecules/LanguageToggle";
+import type { Locale } from "@/i18n/dictionaries";
 
-const sections = ["Merhaba", "Projeler", "CV"];
-
-export function Navbar() {
+export function Navbar({
+  sections,
+  locale,
+}: {
+  sections: readonly string[];
+  locale: Locale;
+}) {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -20,7 +26,7 @@ export function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [sections.length]);
 
   function goTo(i: number) {
     window.scrollTo({ top: i * window.innerHeight, behavior: "smooth" });
@@ -49,6 +55,7 @@ export function Navbar() {
               {label}
             </button>
           ))}
+          <LanguageToggle locale={locale} />
           <ThemeToggle />
         </div>
       </div>

@@ -14,9 +14,11 @@ type Props = {
   desc: string;
   techStack: string[];
   links: ProjectLinks;
+  codeLabel: string;
+  liveLabel: string;
 };
 
-export function ProjectCard({ id, title, desc, techStack, links }: Props) {
+export function ProjectCard({ id, title, desc, techStack, links, codeLabel, liveLabel }: Props) {
   const [open, setOpen] = useState(false);
   const track = useTrack();
   const reduceMotion = useReducedMotion();
@@ -59,7 +61,7 @@ export function ProjectCard({ id, title, desc, techStack, links }: Props) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors"
                 >
-                  <SiGithub size={14} /> Kod
+                  <SiGithub size={14} /> {codeLabel}
                 </a>
               )}
               {links.live && (
@@ -69,7 +71,7 @@ export function ProjectCard({ id, title, desc, techStack, links }: Props) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors"
                 >
-                  <ExternalLink size={14} /> Canlı
+                  <ExternalLink size={14} /> {liveLabel}
                 </a>
               )}
             </div>

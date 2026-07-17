@@ -3,13 +3,19 @@
 import { Copy } from "lucide-react";
 import { toast } from "sonner";
 
-export function CopyEmailButton({ email }: { email: string }) {
+type Props = {
+  email: string;
+  copiedText: string;
+  failText: string;
+};
+
+export function CopyEmailButton({ email, copiedText, failText }: Props) {
   async function copy() {
     try {
       await navigator.clipboard.writeText(email);
-      toast.success("E-posta panoya kopyalandı");
+      toast.success(copiedText);
     } catch {
-      toast.error("Kopyalanamadı");
+      toast.error(failText);
     }
   }
   return (

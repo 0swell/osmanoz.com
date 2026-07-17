@@ -1,7 +1,9 @@
-export function Hero() {
+import type { Dictionary } from "@/i18n/dictionaries";
+
+export function Hero({ dict }: { dict: Dictionary }) {
   return (
     <section
-      aria-label="Tanıtım"
+      aria-label={dict.hero.greet}
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-4"
     >
       {/* Glassmorphism arka plan lekeleri */}
@@ -16,20 +18,22 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-3xl text-center">
         <p className="text-sm font-medium uppercase tracking-widest text-accent">
-          Merhaba, ben
+          {dict.hero.greet}
         </p>
         <h1 className="mt-3 font-display text-5xl font-bold tracking-tight sm:text-7xl">
           Osman Öz
         </h1>
+        <p className="mt-4 font-display text-lg font-medium text-muted sm:text-xl">
+          {dict.hero.tagline}
+        </p>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
-          Modern web teknolojileriyle üretiyorum. Projelerimi incelemek ve
-          CV&apos;me göz atmak için aşağı kaydır.
+          {dict.hero.desc}
         </p>
         <div
           aria-hidden
           className="mt-14 animate-bounce text-muted text-sm select-none"
         >
-          ↓ kaydır
+          {dict.hero.scroll}
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { Providers } from "@/components/providers";
+import { getLocale } from "@/i18n/locale";
 import "./globals.css";
 
 const inter = Inter({
@@ -32,14 +33,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
   return (
     <html
-      lang="tr"
+      lang={locale}
       suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
