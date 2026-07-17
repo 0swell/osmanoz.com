@@ -22,7 +22,8 @@ export function CvDownloadButton({ cvUrl, label, downloadingText, unavailableTex
     }
     track({ type: "CV_DOWNLOAD" });
     toast.success(downloadingText);
-    window.open(cvUrl, "_blank", "noopener,noreferrer");
+    // ?download=1: Blob dosyayı attachment olarak gönderir — her cihazda direkt indirme
+    window.open(`${cvUrl}?download=1`, "_blank", "noopener,noreferrer");
   }
 
   return (
