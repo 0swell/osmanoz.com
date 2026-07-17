@@ -12,14 +12,17 @@ export function DailyBars({
   return (
     <div className="rounded-2xl border-2 border-line bg-surface p-5">
       <h3 className="font-display font-semibold">{title}</h3>
-      <div className="mt-4 flex h-32 items-end gap-1.5">
+      <div className="mt-4 flex h-36 gap-1.5">
         {data.map(({ day, count }) => (
-          <div key={day.toISOString()} className="group relative flex-1">
-            <div
-              style={{ height: `${Math.max(4, (count / max) * 100)}%` }}
-              className={`w-full rounded-t ${count > 0 ? "bg-accent" : "bg-elevated"} transition-opacity group-hover:opacity-80`}
-            />
-            <span className="pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 rounded bg-foreground px-1.5 py-0.5 text-[10px] text-background opacity-0 group-hover:opacity-100">
+          <div key={day.toISOString()} className="flex flex-1 flex-col gap-1">
+            <div className="relative flex flex-1 items-end">
+              <div
+                style={{ height: `${Math.max(3, (count / max) * 100)}%` }}
+                className={`w-full rounded-t ${count > 0 ? "bg-accent" : "bg-elevated"}`}
+                title={`${formatDay(day)}: ${count}`}
+              />
+            </div>
+            <span className={`text-center text-[10px] ${count > 0 ? "font-semibold text-accent" : "text-muted"}`}>
               {count}
             </span>
           </div>
