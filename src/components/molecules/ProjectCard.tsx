@@ -33,7 +33,7 @@ export function ProjectCard({ id, title, desc, techStack, links }: Props) {
         aria-expanded={open}
         className="flex w-full items-center justify-between gap-3 text-left cursor-pointer"
       >
-        <h3 className="font-display text-lg font-semibold">{title}</h3>
+        <h3 className="font-display text-lg font-semibold line-clamp-1">{title}</h3>
         <ChevronDown
           size={18}
           className={`shrink-0 text-muted transition-transform ${open ? "rotate-180" : ""}`}
@@ -49,8 +49,9 @@ export function ProjectCard({ id, title, desc, techStack, links }: Props) {
             transition={{ duration: 0.25 }}
             className="overflow-hidden"
           >
-            <p className="mt-3 text-sm leading-relaxed text-muted">{desc}</p>
-            <div className="mt-4 flex items-center gap-3">
+            {/* Sabit yükseklik: tüm açık kartlarda linkler ve rozetler aynı hizada kalır */}
+            <p className="mt-3 text-sm leading-relaxed text-muted line-clamp-4 min-h-[5.75rem]">{desc}</p>
+            <div className="mt-4 flex items-center gap-3 min-h-5">
               {links.github && (
                 <a
                   href={links.github}
@@ -76,7 +77,7 @@ export function ProjectCard({ id, title, desc, techStack, links }: Props) {
         )}
       </AnimatePresence>
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap content-start gap-2 min-h-14">
         {techStack.map((t) => (
           <Badge key={t}>{t}</Badge>
         ))}

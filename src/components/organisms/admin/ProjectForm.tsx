@@ -13,19 +13,20 @@ export function ProjectForm({ project }: { project?: Project }) {
       <form action={saveProject} className="grid gap-3 sm:grid-cols-2">
         {project && <input type="hidden" name="id" value={project.id} />}
         <label className="text-sm font-medium sm:col-span-2">
-          Başlık
-          <input name="title" defaultValue={project?.title} required className={inputCls} />
+          Başlık <span className="text-xs text-muted">(max 40)</span>
+          <input name="title" defaultValue={project?.title} required maxLength={40} className={inputCls} />
         </label>
         <label className="text-sm font-medium sm:col-span-2">
-          Açıklama
-          <textarea name="desc" defaultValue={project?.desc} required rows={3} className={inputCls} />
+          Açıklama <span className="text-xs text-muted">(max 200 — kartlar eşit boyda kalsın diye)</span>
+          <textarea name="desc" defaultValue={project?.desc} required rows={3} maxLength={200} className={inputCls} />
         </label>
         <label className="text-sm font-medium sm:col-span-2">
-          Tech Stack (virgülle ayır)
+          Tech Stack (virgülle ayır) <span className="text-xs text-muted">(max 60)</span>
           <input
             name="techStack"
             defaultValue={project?.techStack.join(", ")}
             placeholder="Next.js, TypeScript, Tailwind"
+            maxLength={60}
             className={inputCls}
           />
         </label>
