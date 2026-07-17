@@ -34,7 +34,7 @@ export function Navbar({
 
   return (
     <nav className="fixed inset-x-0 top-0 z-40 border-b-2 border-line/60 bg-background/60 backdrop-blur-md">
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4">
         <button
           onClick={() => goTo(0)}
           className="font-display text-base font-bold cursor-pointer"
