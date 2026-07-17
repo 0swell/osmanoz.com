@@ -26,7 +26,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
         <p className="mt-4 font-display text-lg font-medium text-muted sm:text-xl">
           {dict.hero.tagline}
         </p>
-        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
+        <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted">
           {dict.hero.desc}
         </p>
         <div
