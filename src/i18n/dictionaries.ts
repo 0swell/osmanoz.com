@@ -6,7 +6,7 @@ export const dictionaries = {
     hero: {
       greet: "Merhaba, ben",
       tagline: "Software Developer",
-      desc: "Bilgisayar Mühendisliği mezunu, Yazılım Mühendisliği yüksek lisans öğrencisiyim. React, Next.js ve TypeScript ile modern web uygulamaları geliştiriyorum; yüksek lisansta ise Python ve makine öğrenmesiyle alakalı projeler gerçekleştiriyorum. Yapay zekâ destekli geliştirme iş akışımın merkezindedir.",
+      desc: "Bilgisayar Mühendisliği mezunu, Yazılım Mühendisliği yüksek lisans öğrencisiyim. React, Next.js ve TypeScript ile modern web uygulamaları geliştiriyorum; yüksek lisansta ise Python ve makine öğrenmesiyle alakalı projeler gerçekleştiriyorum. Yazılım plan ve geliştirme süreçlerini, modern yapay zekâ araçlarıyla verimli hâle getiriyorum.",
       scroll: "↓ kaydır",
     },
     projects: {
@@ -37,7 +37,7 @@ export const dictionaries = {
     hero: {
       greet: "Hi, I'm",
       tagline: "Software Developer",
-      desc: "Computer Engineering graduate and Software Engineering master's student. I build modern web applications with React, Next.js and TypeScript, while my graduate work focuses on Python and machine learning projects. AI-assisted development is at the core of my workflow.",
+      desc: "Computer Engineering graduate and Software Engineering master's student. I build modern web applications with React, Next.js and TypeScript, while my graduate work focuses on Python and machine learning projects. I streamline software planning and development processes with modern AI tools.",
       scroll: "↓ scroll",
     },
     projects: {
