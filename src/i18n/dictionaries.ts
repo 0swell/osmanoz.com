@@ -6,7 +6,7 @@ export const dictionaries = {
     hero: {
       greet: "Merhaba, ben",
       tagline: "Software Developer",
-      desc: "Bilgisayar Mühendisliği mezunu, Yazılım Mühendisliği yüksek lisans öğrencisiyim. React, Next.js ve TypeScript ile modern web uygulamaları geliştiriyorum; yapay zekâ destekli geliştirme iş akışımın merkezinde.",
+      desc: "Bilgisayar Mühendisliği mezunu, Yazılım Mühendisliği yüksek lisans öğrencisiyim. React, Next.js ve TypeScript ile modern web uygulamaları geliştiriyorum; yüksek lisansta ise Python ve makine öğrenmesiyle alakalı projeler gerçekleştiriyorum. Yapay zekâ destekli geliştirme iş akışımın merkezindedir.",
       scroll: "↓ kaydır",
     },
     projects: {
@@ -26,6 +26,7 @@ export const dictionaries = {
       unavailable: "CV şu an mevcut değil",
     },
     footer: {
+      contact: "İletişim",
       rights: "Tüm hakları saklıdır.",
       copied: "E-posta panoya kopyalandı",
       copyFail: "Kopyalanamadı",
@@ -36,7 +37,7 @@ export const dictionaries = {
     hero: {
       greet: "Hi, I'm",
       tagline: "Software Developer",
-      desc: "Computer Engineering graduate and Software Engineering master's student. I build modern web applications with React, Next.js and TypeScript — with AI-assisted development at the core of my workflow.",
+      desc: "Computer Engineering graduate and Software Engineering master's student. I build modern web applications with React, Next.js and TypeScript, while my graduate work focuses on Python and machine learning projects. AI-assisted development is at the core of my workflow.",
       scroll: "↓ scroll",
     },
     projects: {
@@ -56,6 +57,7 @@ export const dictionaries = {
       unavailable: "CV is not available right now",
     },
     footer: {
+      contact: "Contact",
       rights: "All rights reserved.",
       copied: "Email copied to clipboard",
       copyFail: "Copy failed",
