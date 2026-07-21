@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { LogIn } from "lucide-react";
 import { Button } from "@/components/atoms/Button";
+import { Logo } from "@/components/atoms/Logo";
 
 function LoginForm() {
   const router = useRouter();
@@ -35,6 +36,7 @@ function LoginForm() {
       onSubmit={onSubmit}
       className="w-full max-w-sm rounded-3xl border-2 border-line bg-surface/60 p-8 shadow-xl backdrop-blur-xl"
     >
+      <Logo className="mx-auto mb-4 h-14 w-auto" />
       <h1 className="font-display text-2xl font-bold">Admin Girişi</h1>
       <p className="mt-1 text-sm text-muted">osmanoz.com yönetim paneli</p>
 

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/molecules/ThemeToggle";
 import { LanguageToggle } from "@/components/molecules/LanguageToggle";
+import { Logo } from "@/components/atoms/Logo";
 import type { Locale } from "@/i18n/dictionaries";
 
 export function Navbar({
@@ -37,9 +38,13 @@ export function Navbar({
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-2 sm:px-4">
         <button
           onClick={() => goTo(0)}
-          className="font-display text-sm sm:text-base font-bold cursor-pointer"
+          aria-label="Başa dön"
+          className="flex items-center gap-2 cursor-pointer"
         >
-          osmanoz<span className="text-accent">.com</span>
+          <Logo className="h-7 w-auto sm:h-8" />
+          <span className="hidden sm:inline font-display text-base font-bold">
+            osmanoz<span className="text-accent">.com</span>
+          </span>
         </button>
         <div className="flex items-center gap-0.5 sm:gap-1">
           {sections.map((label, i) => (

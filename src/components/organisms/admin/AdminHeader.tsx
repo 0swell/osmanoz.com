@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogoutButton } from "@/components/molecules/LogoutButton";
 import { ThemeToggle } from "@/components/molecules/ThemeToggle";
+import { Logo } from "@/components/atoms/Logo";
 
 const tabs = [
   { href: "/admin/dashboard", label: "Dashboard" },
@@ -16,7 +17,8 @@ export function AdminHeader() {
     <header className="sticky top-0 z-40 border-b-2 border-line bg-background/70 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
         <div className="flex items-center gap-4">
-          <span className="font-display font-bold">
+          <span className="flex items-center gap-2 font-display font-bold">
+            <Logo className="h-7 w-auto" />
             osmanoz<span className="text-accent">.com</span>{" "}
             <span className="text-sm font-normal text-muted">/ admin</span>
           </span>
