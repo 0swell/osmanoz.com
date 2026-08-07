@@ -23,6 +23,18 @@ export function FaqSection({ dict }: { dict: Dictionary }) {
         <SectionHeading>{dict.faq.title}</SectionHeading>
         <p className="mt-2 text-muted">{dict.faq.subtitle}</p>
 
+        <dl className="mt-6 grid grid-cols-3 gap-3">
+          {dict.faq.stats.map((s) => (
+            <div
+              key={s.label}
+              className="rounded-2xl border-2 border-line bg-surface p-4 text-center"
+            >
+              <dt className="font-display text-2xl font-bold text-accent">{s.value}</dt>
+              <dd className="mt-1 text-xs text-muted">{s.label}</dd>
+            </div>
+          ))}
+        </dl>
+
         <dl className="mt-8 divide-y divide-line">
           {dict.faq.items.map((item) => (
             <div key={item.q} className="py-5">

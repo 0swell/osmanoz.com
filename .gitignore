@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# yerel çalışma/analiz materyali (public repoya girmesin)
+/SEO-GEO-AEO-Checklists
+.env.vercel
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

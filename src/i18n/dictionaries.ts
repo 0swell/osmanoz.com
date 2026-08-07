@@ -28,14 +28,19 @@ export const dictionaries = {
     faq: {
       title: "Sıkça Sorulan Sorular",
       subtitle: "Osman Öz hakkında en çok merak edilenler.",
+      stats: [
+        { value: "2025", label: "Bilgisayar Müh. mezunu" },
+        { value: "Y. Lisans", label: "Yazılım Mühendisliği (2025–)" },
+        { value: "10+", label: "teknoloji ve araç" },
+      ],
       items: [
         {
           q: "Osman Öz kimdir?",
-          a: "Osman Öz, Bilgisayar Mühendisliği mezunu ve Burdur Mehmet Akif Ersoy Üniversitesi'nde Yazılım Mühendisliği yüksek lisans öğrencisi bir yazılım geliştiricidir. React, Next.js ve TypeScript ile modern web uygulamaları geliştirir.",
+          a: "Osman Öz, 2025'te Bilgisayar Mühendisliği'nden mezun olmuş ve aynı yıl Burdur Mehmet Akif Ersoy Üniversitesi'nde Yazılım Mühendisliği yüksek lisansına başlamış bir yazılım geliştiricidir. React, Next.js ve TypeScript ile modern web uygulamaları geliştirir.",
         },
         {
           q: "Osman Öz hangi teknolojilerle çalışıyor?",
-          a: "Başlıca React, Next.js, TypeScript ve Tailwind CSS ile frontend geliştirir. Ayrıca Python ve makine öğrenmesi (YOLOv8), Flutter/Dart ile mobil ve T-SQL ile veritabanı projeleri üretir.",
+          a: "10'dan fazla teknoloji ve araçla çalışır: başlıca React, Next.js, TypeScript ve Tailwind CSS ile frontend; ayrıca Python ve makine öğrenmesi (YOLOv8), Flutter/Dart ile mobil ve T-SQL ile veritabanı projeleri üretir.",
         },
         {
           q: "Osman Öz yapay zekâ destekli geliştirme yapıyor mu?",
@@ -86,14 +91,19 @@ export const dictionaries = {
     faq: {
       title: "Frequently Asked Questions",
       subtitle: "The most common questions about Osman Öz.",
+      stats: [
+        { value: "2025", label: "Computer Eng. graduate" },
+        { value: "MSc", label: "Software Engineering (2025–)" },
+        { value: "10+", label: "technologies & tools" },
+      ],
       items: [
         {
           q: "Who is Osman Öz?",
-          a: "Osman Öz is a software developer — a Computer Engineering graduate and a Software Engineering master's student at Burdur Mehmet Akif Ersoy University. He builds modern web applications with React, Next.js and TypeScript.",
+          a: "Osman Öz is a software developer who graduated in Computer Engineering in 2025 and started a Software Engineering master's the same year at Burdur Mehmet Akif Ersoy University. He builds modern web applications with React, Next.js and TypeScript.",
         },
         {
           q: "Which technologies does Osman Öz work with?",
-          a: "He mainly builds frontends with React, Next.js, TypeScript and Tailwind CSS. He also works on Python and machine learning (YOLOv8), mobile apps with Flutter/Dart, and databases with T-SQL.",
+          a: "He works with 10+ technologies and tools: mainly React, Next.js, TypeScript and Tailwind CSS for frontend; plus Python and machine learning (YOLOv8), mobile apps with Flutter/Dart, and databases with T-SQL.",
         },
         {
           q: "Does Osman Öz use AI-assisted development?",
