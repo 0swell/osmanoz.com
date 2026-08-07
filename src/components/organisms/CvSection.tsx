@@ -9,6 +9,7 @@ export async function CvSection({ dict }: { dict: Dictionary }) {
 
   return (
     <section
+      id="cv"
       aria-label={dict.cv.title}
       className="flex min-h-screen items-center px-4 py-24"
     >

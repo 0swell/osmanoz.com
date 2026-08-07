@@ -25,9 +25,36 @@ export const dictionaries = {
       downloading: "CV indiriliyor",
       unavailable: "CV şu an mevcut değil",
     },
+    faq: {
+      title: "Sıkça Sorulan Sorular",
+      subtitle: "Osman Öz hakkında en çok merak edilenler.",
+      items: [
+        {
+          q: "Osman Öz kimdir?",
+          a: "Osman Öz, Bilgisayar Mühendisliği mezunu ve Burdur Mehmet Akif Ersoy Üniversitesi'nde Yazılım Mühendisliği yüksek lisans öğrencisi bir yazılım geliştiricidir. React, Next.js ve TypeScript ile modern web uygulamaları geliştirir.",
+        },
+        {
+          q: "Osman Öz hangi teknolojilerle çalışıyor?",
+          a: "Başlıca React, Next.js, TypeScript ve Tailwind CSS ile frontend geliştirir. Ayrıca Python ve makine öğrenmesi (YOLOv8), Flutter/Dart ile mobil ve T-SQL ile veritabanı projeleri üretir.",
+        },
+        {
+          q: "Osman Öz yapay zekâ destekli geliştirme yapıyor mu?",
+          a: "Evet. Yazılım planlama ve geliştirme süreçlerini Claude ve Gemini gibi modern yapay zekâ araçlarıyla hızlandırır; verimliliği artırmak için yapay zekâ destekli iş akışını merkeze alır.",
+        },
+        {
+          q: "Osman Öz ile nasıl iletişime geçilir?",
+          a: "İletişim için z0nams0@gmail.com adresine e-posta gönderebilir ya da footer'daki GitHub ve LinkedIn bağlantılarından ulaşabilirsiniz.",
+        },
+        {
+          q: "Osman Öz'ün CV'si nasıl indirilir?",
+          a: "CV bölümündeki 'CV İndir' butonuna tıklayarak güncel özgeçmişi PDF olarak indirebilirsiniz.",
+        },
+      ],
+    },
     footer: {
       contact: "İletişim",
       rights: "Tüm hakları saklıdır.",
+      updated: "Son güncelleme",
       copied: "E-posta panoya kopyalandı",
       copyFail: "Kopyalanamadı",
     },
@@ -56,9 +83,36 @@ export const dictionaries = {
       downloading: "Downloading CV",
       unavailable: "CV is not available right now",
     },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "The most common questions about Osman Öz.",
+      items: [
+        {
+          q: "Who is Osman Öz?",
+          a: "Osman Öz is a software developer — a Computer Engineering graduate and a Software Engineering master's student at Burdur Mehmet Akif Ersoy University. He builds modern web applications with React, Next.js and TypeScript.",
+        },
+        {
+          q: "Which technologies does Osman Öz work with?",
+          a: "He mainly builds frontends with React, Next.js, TypeScript and Tailwind CSS. He also works on Python and machine learning (YOLOv8), mobile apps with Flutter/Dart, and databases with T-SQL.",
+        },
+        {
+          q: "Does Osman Öz use AI-assisted development?",
+          a: "Yes. He speeds up software planning and development with modern AI tools such as Claude and Gemini, placing an AI-assisted workflow at the center of his process to boost productivity.",
+        },
+        {
+          q: "How can I contact Osman Öz?",
+          a: "You can email z0nams0@gmail.com or reach out through the GitHub and LinkedIn links in the footer.",
+        },
+        {
+          q: "How do I download Osman Öz's CV?",
+          a: "Click the 'Download CV' button in the CV section to get the latest resume as a PDF.",
+        },
+      ],
+    },
     footer: {
       contact: "Contact",
       rights: "All rights reserved.",
+      updated: "Last updated",
       copied: "Email copied to clipboard",
       copyFail: "Copy failed",
     },

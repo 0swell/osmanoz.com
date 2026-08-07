@@ -15,7 +15,7 @@ export default async function PublicLayout({
       <ScrollProgress />
       <Navbar sections={dict.nav} locale={locale} />
       <main>{children}</main>
-      <Footer dict={dict} />
+      <Footer dict={dict} locale={locale} />
       <ScrollToTop />
     </>
   );

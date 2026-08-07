@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "@/components/providers";
+import { JsonLd } from "@/components/atoms/JsonLd";
 import { getLocale } from "@/i18n/locale";
+import { SITE } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,22 +23,43 @@ export const viewport: Viewport = {
   colorScheme: "light dark",
 };
 
+const description =
+  "Osman Öz — yazılım geliştirici (Software Developer). React, Next.js ve TypeScript ile modern web; Python ve makine öğrenmesi projeleri. Projelerimi inceleyin, CV'me ulaşın.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://osmanoz.com"),
+  metadataBase: new URL(SITE.url),
   title: {
-    default: "Osman Öz — Portfolyo",
+    default: "Osman Öz — Software Developer | React, Next.js & TypeScript",
     template: "%s | Osman Öz",
   },
-  description:
-    "Osman Öz'ün kişisel web sayfası: projeler, profesyonel CV ve iletişim.",
+  description,
+  keywords: [
+    "Osman Öz",
+    "Osman Oz",
+    "osmanoz",
+    "Software Developer",
+    "Yazılım Geliştirici",
+    "Frontend Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "portfolyo",
+  ],
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  alternates: { canonical: SITE.url },
   openGraph: {
-    title: "Osman Öz — Portfolyo",
-    description:
-      "Osman Öz'ün kişisel web sayfası: projeler, profesyonel CV ve iletişim.",
-    url: "https://osmanoz.com",
+    title: "Osman Öz — Software Developer",
+    description,
+    url: SITE.url,
     siteName: "osmanoz.com",
     locale: "tr_TR",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Osman Öz — Software Developer",
+    description,
   },
 };
 
@@ -52,7 +76,9 @@ export default async function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <JsonLd />
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );

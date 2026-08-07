@@ -9,6 +9,7 @@ export async function ProjectsSection({ dict }: { dict: Dictionary }) {
 
   return (
     <section
+      id="projeler"
       aria-label={dict.projects.title}
       className="flex min-h-screen items-center px-4 py-24"
     >
