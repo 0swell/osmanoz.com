@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 };
 
 const description =
-  "Osman Öz — yazılım geliştirici (Software Developer). React, Next.js ve TypeScript ile modern web; Python ve makine öğrenmesi projeleri. Projelerimi inceleyin, CV'me ulaşın.";
+  "Osman Öz — yazılım mühendisi, MAKÜ Bilgisayar Mühendisliği mezunu. React, Next.js ve TypeScript ile modern web ve makine öğrenmesi projeleri geliştiriyorum.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
