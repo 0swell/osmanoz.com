@@ -61,7 +61,7 @@ export function ProjectCard({ id, title, desc, techStack, links, codeLabel, live
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors"
                 >
-                  <SiGithub size={14} /> {codeLabel}
+                  <SiGithub size={14} aria-hidden focusable={false} /> {codeLabel}
                 </a>
               )}
               {links.live && (

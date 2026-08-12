@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Providers } from "@/components/providers";
 import { JsonLd } from "@/components/atoms/JsonLd";
 import { getLocale } from "@/i18n/locale";
@@ -44,6 +45,8 @@ export const metadata: Metadata = {
     "Next.js",
     "TypeScript",
     "portfolyo",
+    "osman öz website",
+    "osman öz kişisel web sitesi",
   ],
   authors: [{ name: SITE.name, url: SITE.url }],
   creator: SITE.name,
@@ -80,6 +83,9 @@ export default async function RootLayout({
         <Providers>{children}</Providers>
         <Analytics />
       </body>
+      {process.env.NODE_ENV === "production" && (
+        <GoogleAnalytics gaId="G-4YMH4F27Z0" />
+      )}
     </html>
   );
 }

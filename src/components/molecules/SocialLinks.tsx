@@ -18,7 +18,7 @@ export function SocialLinks() {
             aria-label={label}
             className="inline-flex size-9 items-center justify-center rounded-xl hover:bg-elevated hover:text-accent transition-colors"
           >
-            <Icon size={18} />
+            <Icon size={18} title={label} role="img" aria-label={label} />
           </a>
         </li>
       ))}

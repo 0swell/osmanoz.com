@@ -6,19 +6,23 @@
 > Python ve makine öğrenmesi projeleri geliştirir.
 
 ## Kişi
+
 - İsim: Osman Öz (Osman Oz)
 - Unvan: Software Developer / Yazılım Geliştirici
-- Eğitim: Bilgisayar Mühendisliği (lisans), Yazılım Mühendisliği (yüksek lisans) — Burdur Mehmet Akif Ersoy Üniversitesi
+- Eğitim: Bilgisayar Mühendisliği (lisans), Yazılım Mühendisliği (yüksek lisans) — Burdur Mehmet Akif Ersoy Üniversitesi (MAKÜ)
 - Konum: Burdur, Türkiye
 - Teknolojiler: React, Next.js, TypeScript, Tailwind CSS, JavaScript, Python, Makine Öğrenmesi (YOLOv8), Flutter/Dart, T-SQL
 
 ## Bağlantılar
-- Web: https://osmanoz.com
-- GitHub: https://github.com/0swell
-- LinkedIn: https://www.linkedin.com/in/osmanoz15
-- E-posta: z0nams0@gmail.com
+
+- [Web sitesi](https://osmanoz.com)
+- [GitHub](https://github.com/0swell)
+- [LinkedIn](https://www.linkedin.com/in/osmanoz15)
+- [E-posta](mailto:z0nams0@gmail.com)
 
 ## Sayfalar
-- Ana sayfa (Hero / Projeler / CV / SSS): https://osmanoz.com
-- CV: https://osmanoz.com/#cv
-- Sıkça Sorulan Sorular: https://osmanoz.com/#sss
+
+- [Ana sayfa (Hero / Projeler / CV / SSS)](https://osmanoz.com)
+- [Projeler](https://osmanoz.com/#projeler)
+- [CV](https://osmanoz.com/#cv)
+- [Sıkça Sorulan Sorular](https://osmanoz.com/#sss)
