@@ -10,6 +10,8 @@ export function Logo({ className = "" }: { className?: string }) {
       <img
         src="/logo/OZ-Logo-Light.svg"
         alt="Osman Öz"
+        width={613}
+        height={500}
         className={`block dark:hidden ${className}`}
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -17,6 +19,8 @@ export function Logo({ className = "" }: { className?: string }) {
         src="/logo/OZ-Logo-Dark.svg"
         alt=""
         aria-hidden="true"
+        width={613}
+        height={500}
         className={`hidden dark:block ${className}`}
       />
     </>
