@@ -5,7 +5,7 @@ export const dictionaries = {
     nav: ["Merhaba", "Projeler", "CV"],
     hero: {
       greet: "Merhaba, ben",
-      tagline: "Software Developer",
+      tagline: "Yazılım Mühendisi",
       desc: "Bilgisayar Mühendisliği mezunu, Yazılım Mühendisliği yüksek lisans öğrencisiyim. React, Next.js ve TypeScript ile modern web uygulamaları geliştiriyorum; yüksek lisansta ise Python ve makine öğrenmesiyle alakalı projeler gerçekleştiriyorum. Yazılım plan ve geliştirme süreçlerini, modern yapay zekâ araçlarıyla verimli hâle getiriyorum.",
       scroll: "↓ kaydır",
     },
@@ -37,6 +37,14 @@ export const dictionaries = {
         {
           q: "Osman Öz kimdir?",
           a: "Osman Öz, 2025'te Bilgisayar Mühendisliği'nden mezun olmuş ve aynı yıl Burdur Mehmet Akif Ersoy Üniversitesi'nde Yazılım Mühendisliği yüksek lisansına başlamış bir yazılım geliştiricidir. React, Next.js ve TypeScript ile modern web uygulamaları geliştirir.",
+        },
+        {
+          q: "Osman Öz yazılım mühendisi midir?",
+          a: "Evet. Osman Öz, MAKÜ Bilgisayar Mühendisliği mezunu ve Yazılım Mühendisliği yüksek lisans öğrencisi bir yazılım mühendisi ve geliştiricidir (Software Developer). React, Next.js ve TypeScript ile modern web uygulamaları geliştirir.",
+        },
+        {
+          q: "osmanoz.com nedir?",
+          a: "osmanoz.com, Osman Öz'ün kişisel web sitesidir (personal website) ve portfolyosudur. Osman Öz'ün projelerini, güncel CV'sini ve iletişim bilgilerini bu website üzerinden inceleyebilirsiniz.",
         },
         {
           q: "Osman Öz hangi teknolojilerle çalışıyor?",
@@ -100,6 +108,14 @@ export const dictionaries = {
         {
           q: "Who is Osman Öz?",
           a: "Osman Öz is a software developer who graduated in Computer Engineering in 2025 and started a Software Engineering master's the same year at Burdur Mehmet Akif Ersoy University. He builds modern web applications with React, Next.js and TypeScript.",
+        },
+        {
+          q: "Is Osman Öz a software engineer?",
+          a: "Yes. Osman Öz is a software engineer — a MAKÜ Computer Engineering graduate and Software Engineering master's student — and a hands-on software developer working with React, Next.js and TypeScript.",
+        },
+        {
+          q: "What is osmanoz.com?",
+          a: "osmanoz.com is Osman Öz's personal website and portfolio. On this website you can explore Osman Öz's projects, his up-to-date CV and contact details.",
         },
         {
           q: "Which technologies does Osman Öz work with?",
